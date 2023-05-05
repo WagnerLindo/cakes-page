@@ -39,8 +39,9 @@ body {
 }
 .header {
   color: var(--text_dark);
-  margin-bottom: 40px;
-  padding: 16px 16px 0px 16px;
+  margin-block-end: 40px;
+  padding-inline: 16px;
+  padding-block-start: 16px;
 }
 .main {
   padding-inline: 16px;
@@ -53,25 +54,30 @@ body {
   font-family: Impact;
   text-align: center;
 }
-.logoImage {
-  /* width: 328px; */
-  margin: auto;
-}
 .title {
   font: var(--h3);
+}
+.header__content {
+  margin-block-start: 32px;
 }
 .header__description {
   font: var(--text);
 }
-.header__content {
-  margin-top: 32px;
+.header__content,
+.search__descripcion,
+.logo__desktop {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 .slider {
-  flex: 1;
   align-self: center;
+}
+.desktop__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
 }
 .button {
   width: 100%;
@@ -85,8 +91,14 @@ body {
 .section {
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 40px;
   color: var(--text_dark);
+}
+.specials__cards,
+.search_cards {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
 }
 .titles {
   text-align: center;
@@ -134,16 +146,16 @@ body {
 }
 .stars {
   width: 50%;
-  margin-bottom: 58px;
+  margin-block-end: 58px;
 }
 .footer {
   padding-inline: 16px;
-  padding-block: 64px;
+  padding-block-start: 64px;
   display: flex;
   gap: 40px;
 }
 .footer__title {
-  padding-right: 10px;
+  padding-inline: 10px;
 }
 .contact__title {
   font: var(h5);
@@ -157,6 +169,9 @@ body {
 }
 .textInformation {
   font: var(--text_big);
+}
+.contact {
+  margin-block-end: 40px;
 }
 .fill {
   background-color: var(--orange-ligth);
@@ -176,12 +191,12 @@ body {
 .fill__title {
   font: var(--label);
 }
-.holder::-webkit-input-placeholder {
+.holder::placeholder {
   color: var(--grey-2);
   font: var(--text);
 }
 .holder {
-  text-overflow: ellipsis;
+  text-overflow: ellipsiss;
   padding: 16px;
   border: none;
   border-radius: 6px;
@@ -196,7 +211,7 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin-top: 40px;
+  margin-block-end: 40px;
   gap: 24px;
 }
 .social__header {
@@ -211,35 +226,96 @@ body {
   transition: 0.3s;
   transform: scale(1.5);
 }
-
-@media (min-width: 1280px) {
+@media (min-width: 768px) {
   .cakeshop {
     text-align: start;
   }
   .header {
     display: flex;
     flex-direction: column;
-    padding-left: 120px;
+    padding-inline-start: 30px;
+  }
+  .main {
+    padding-inline: 30px;
+    padding-block: 50px;
+  }
+  .footer,
+  .stories {
+    padding-inline: 60px;
   }
   .titles {
     font: var(--h2);
   }
   .header__content {
-    display: flex;
     flex-direction: row-reverse;
   }
-  .desktop__title {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    width: 40%;
-    padding-top: 50px;
-  }
   .logo__desktop {
-    width: 60%;
+    width: 100%;
   }
   .logoImage {
-    width: 100%;
+    flex-basis: 100%;
+  }
+  .desktop__title .button {
+    width: 80%;
+  }
+  .photos {
+    margin: auto;
+  }
+  .cards {
+    padding-inline: 160px;
+  }
+  .contact {
+    padding: unset;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    padding-inline-start: 60px;
+    padding-block-start: 40px;
+  }
+  .header__title {
+    font: var(--h1);
+  }
+  .main {
+    padding-inline: 60px;
+  }
+  .desktop__title .button {
+    width: 60%;
+  }
+  .slider {
+    align-self: flex-start;
+  }
+  .cards {
+    padding: unset;
+    display: flex;
+    flex-direction: row;
+  }
+  .specials__cards {
+    padding-inline: 140px;
+  }
+  .search_cards {
+    padding-inline: 120px;
+  }
+  .contact {
+    flex-direction: column;
+  }
+  .footer,
+  .stories {
+    padding-inline: unset;
+  }
+  .footer,
+  .stories {
+    padding-inline: 120px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .header {
+    padding-inline-start: 120px;
+  }
+  .desktop__title {
+    flex-basis: 55%;
   }
   .desktop__title .button {
     width: 50%;
@@ -249,17 +325,26 @@ body {
     padding-block: 50px;
     width: fit-content;
   }
+  .cards {
+    flex-direction: column;
+  }
+  .photos {
+    margin: unset;
+  }
   .mostSearch {
     margin-block: 50px;
   }
   .specials__cards {
     display: flex;
+    flex-direction: row;
+    padding: unset;
     gap: 24px;
   }
   .search_cards {
     display: grid;
     gap: 24px;
     grid-template-columns: 1fr 1fr;
+    padding: unset;
   }
   .choco__photos {
     object-fit: cover;
@@ -284,9 +369,19 @@ body {
   }
   .footer__box {
     display: flex;
+    margin-block: 50px;
   }
   .social__header {
     flex-direction: row;
     justify-content: space-between;
+  }
+  .fill {
+    flex-basis: 50%;
+  }
+  .enviar {
+    width: 40%;
+  }
+  .stories {
+    padding-inline: unset;
   }
 }

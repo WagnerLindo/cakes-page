@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,7 +17,7 @@
     <div class="allContent">
       <div class="colorGradient">
         <header class="header">
-          <div><h4 class="cakeshop">Cakeshop</h4></div>
+          <span class="cakeshop">Cakeshop</span>
           <div class="header__content">
             <div class="logo__desktop">
               <img class="logoImage" src="./images/image 2.png" alt="" />
@@ -34,7 +35,7 @@
           </div>
         </header>
       </div>
-      <div class="section main">
+      <div class="main">
         <section class="section specials">
           <h3 class="titles specials__title">Nuestros especiales del mes</h3>
           <div class="specials__cards">
@@ -44,17 +45,19 @@
                 src="./images/cake1.svg"
                 alt=""
               />
-              <div class="specials__price">
-                <h4 class="price__title">
-                  Naked cakes
-                  <span>$ 288</span>
-                </h4>
+              <div>
+                <div class="specials__price">
+                  <h4 class="price__title">
+                    Naked cakes
+                    <span>$ 288</span>
+                  </h4>
+                </div>
+                <p class="descriptions specials__description">
+                  Pensando en los graves problemas de obesidad de la actualidad,
+                  el naked cake reduce la cantidad de calorías para consumo
+                </p>
+                <button class="button">ORDENAR AHORA</button>
               </div>
-              <p class="descriptions specials__description">
-                Pensando en los graves problemas de obesidad de la actualidad,
-                el naked cake reduce la cantidad de calorías para consumo
-              </p>
-              <button class="button">ORDENAR AHORA</button>
             </div>
             <div class="cards vanilla">
               <img
@@ -62,17 +65,19 @@
                 src="./images/cake2.svg"
                 alt=""
               />
-              <div class="specials__price">
-                <h4 class="price__title">
-                  Basic vanilla cake
-                  <span>$ 288</span>
-                </h4>
+              <div>
+                <div class="specials__price">
+                  <h4 class="price__title">
+                    Basic vanilla cake
+                    <span>$ 288</span>
+                  </h4>
+                </div>
+                <p class="descriptions specials__description">
+                  Pensando en los graves problemas de obesidad de la actualidad,
+                  el naked cake reduce la cantidad de calorías para consumo
+                </p>
+                <button class="button">ORDENAR AHORA</button>
               </div>
-              <p class="descriptions specials__description">
-                Pensando en los graves problemas de obesidad de la actualidad,
-                el naked cake reduce la cantidad de calorías para consumo
-              </p>
-              <button class="button">ORDENAR AHORA</button>
             </div>
             <div class="cards clinkers">
               <img
@@ -80,17 +85,19 @@
                 src="./images/cake3.svg"
                 alt=""
               />
-              <div class="specials__price">
-                <h4 class="price__title">
-                  Clinkers cake
-                  <span>$ 288</span>
-                </h4>
+              <div>
+                <div class="specials__price">
+                  <h4 class="price__title">
+                    Clinkers cake
+                    <span>$ 288</span>
+                  </h4>
+                </div>
+                <p class="descriptions specials__description">
+                  Apto para coronar cualquier mesa de cumpleaños. Dos deliciosas
+                  capas de pastel de vainilla y un centro de pastel de queso...
+                </p>
+                <button class="button">ORDENAR AHORA</button>
               </div>
-              <p class="descriptions specials__description">
-                Apto para coronar cualquier mesa de cumpleaños. Dos deliciosas
-                capas de pastel de vainilla y un centro de pastel de queso...
-              </p>
-              <button class="button">ORDENAR AHORA</button>
             </div>
           </div>
         </section>
@@ -238,7 +245,7 @@
               <p class="textInformation">cakeshop@gmail.com</p>
             </div>
           </div>
-          <div class="fill">
+          <form class="fill">
             <div class="fill__content">
               <div>
                 <h4 class="price__title">
@@ -282,7 +289,7 @@
               </div>
               <button class="button enviar">ENVIAR MENSAJE</button>
             </div>
-          </div>
+          </form>
         </div>
         <div class="social">
           <div class="social__header">
