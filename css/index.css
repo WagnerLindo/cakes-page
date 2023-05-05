@@ -88,6 +88,10 @@ body {
   font: var(--button);
   color: var(--white);
 }
+.button:hover {
+  cursor: pointer;
+  background-color: rgba(137, 10, 10, 0.823);
+}
 .section {
   display: flex;
   flex-direction: column;
@@ -222,9 +226,18 @@ body {
 .linea {
   border: 0.5px solid var(--bg-2);
 }
-.icon:active {
-  transition: 0.3s;
-  transform: scale(1.5);
+.photos:hover {
+  transition: 0.2s;
+  transform: scale(0.97);
+  cursor: pointer;
+}
+.icon:hover,
+.photo__person:hover {
+  transition: 0.2s;
+  transform: scale(1.3);
+}
+.error {
+  color: orangered;
 }
 @media (min-width: 768px) {
   .cakeshop {

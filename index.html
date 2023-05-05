@@ -195,7 +195,7 @@
           <div class="stories">
             <div class="story robert">
               <div class="person">
-                <img src="./images/photo1.svg" alt="" />
+                <img class="photo__person" src="./images/photo1.svg" alt="" />
                 <h4 class="price__title">Robert Fox</h4>
               </div>
               <p class="descriptions">
@@ -206,7 +206,7 @@
             </div>
             <div class="story jenny">
               <div class="person">
-                <img src="./images/photo2.svg" alt="" />
+                <img class="photo__person" src="./images/photo2.svg" alt="" />
                 <h4 class="price__title">Jenny Wilson</h4>
               </div>
               <p class="descriptions">
@@ -217,7 +217,7 @@
             </div>
             <div class="story wade">
               <div class="person">
-                <img src="./images/photo3.svg" alt="" />
+                <img class="photo__person" src="./images/photo3.svg" alt="" />
                 <h4 class="price__title">Wade Warren</h4>
               </div>
               <p class="descriptions">
@@ -287,7 +287,9 @@
                 />
                 <span class="error" id="descripcionError"></span>
               </div>
-              <button class="button enviar">ENVIAR MENSAJE</button>
+              <button type="button" class="button enviar" id="buttonEnviar">
+                ENVIAR MENSAJE
+              </button>
             </div>
           </form>
         </div>
@@ -305,5 +307,6 @@
         </div>
       </div>
     </div>
+    <script src="./index.js"></script>
   </body>
 </html>
