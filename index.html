@@ -251,13 +251,13 @@
           </div>
           <form class="fill">
             <div class="fill__content">
-              <div>
-                <h4 class="price__title">
-                  Envía un mensaje con los detalles de tu pedido
-                </h4>
-              </div>
+              <h4 class="fill__maintitle">
+                Envía un mensaje con los detalles de tu pedido
+              </h4>
               <div class="put name">
-                <label for="name" class="fill__title">NOMBRE COMPLETO</label>
+                <label for="name" class="fill__title"
+                  >NOMBRE COMPLETO <span class="error" id="nameError"></span
+                ></label>
                 <input
                   class="holder name"
                   type="text"
@@ -265,12 +265,12 @@
                   id="name"
                   placeholder="Ingresa tu nombre"
                 />
-                <span class="error" id="nameError"></span>
+                <span></span>
               </div>
               <div class="put email">
                 <label for="email" class="fill__title"
-                  >CORREO ELECTRONICO</label
-                >
+                  >CORREO ELECTRONICO <span class="error" id="emailError"></span
+                ></label>
                 <input
                   class="holder email"
                   type="text"
@@ -278,18 +278,20 @@
                   id="email"
                   placeholder="Ingresa tu correo electrónico"
                 />
-                <span class="error" id="emailError"></span>
+                <span></span>
               </div>
               <div class="put descripcion">
-                <label for="descripción" class="fill__title">DESCRIPCION</label>
-                <input
+                <label for="descripción" class="fill__title"
+                  >DESCRIPCION <span class="error" id="descripcionError"></span
+                ></label>
+                <textarea
                   class="holder holder__descripcion"
-                  type="text"
                   name="descripcion"
                   id="descripcion"
                   placeholder="Ingresa una breve descripción del pedido que tienes en mente"
-                />
-                <span class="error" id="descripcionError"></span>
+                  rows="5"
+                ></textarea>
+                <span></span>
               </div>
               <button type="button" class="button enviar" id="buttonEnviar">
                 ENVIAR MENSAJE

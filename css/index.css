@@ -168,6 +168,7 @@ body {
 }
 .mostSearch__title {
   align-self: flex-start;
+  isolation: isolate;
 }
 .comments__title {
   padding-inline: 25px;
@@ -218,34 +219,30 @@ body {
   padding: 28px;
   border-radius: 6px;
 }
-.fill__content {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
 .put {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+.fill__maintitle {
+  font: var(--h4-bold);
+  margin-bottom: 24px;
 }
 .fill__title {
   font: var(--label);
 }
 .holder::placeholder {
   color: var(--grey-2);
-  font: var(--text);
+  font: var(--text_small);
+  line-height: 1.5z;
 }
 .holder {
-  text-overflow: ellipsiss;
   padding: 16px;
   border: none;
   border-radius: 6px;
 }
-.holder__descripcion {
-  height: 50px;
-}
 .enviar {
-  width: 60%;
+  max-width: 170px;
 }
 .social {
   display: flex;
@@ -466,10 +463,7 @@ body {
     justify-content: space-between;
   }
   .fill {
-    flex-basis: 50%;
-  }
-  .enviar {
-    width: 40%;
+    flex-basis: 40%;
   }
   .stories {
     padding-inline: unset;
