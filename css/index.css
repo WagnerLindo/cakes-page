@@ -228,10 +228,6 @@ body {
   font: var(--h4-bold);
   margin-bottom: 24px;
 }
-.fill__maintitle {
-  font: var(--h4-bold);
-  margin-bottom: 24px;
-}
 .fill__title {
   font: var(--label);
 }
