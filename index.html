@@ -17,6 +17,8 @@
     <div class="allContent">
       <div class="colorGradient">
         <header class="header">
+          <div class="circleblue"></div>
+          <div class="circlered"></div>
           <span class="cakeshop">Cakeshop</span>
           <div class="header__content">
             <div class="logo__desktop">
@@ -45,14 +47,14 @@
                 src="./images/cake1.svg"
                 alt=""
               />
-              <div>
+              <div class="specials__description">
                 <div class="specials__price">
                   <h4 class="price__title">
                     Naked cakes
                     <span>$ 288</span>
                   </h4>
                 </div>
-                <p class="descriptions specials__description">
+                <p class="descriptions">
                   Pensando en los graves problemas de obesidad de la actualidad,
                   el naked cake reduce la cantidad de calorías para consumo
                 </p>
@@ -65,7 +67,7 @@
                 src="./images/cake2.svg"
                 alt=""
               />
-              <div>
+              <div class="specials__description">
                 <div class="specials__price">
                   <h4 class="price__title">
                     Basic vanilla cake
@@ -85,7 +87,7 @@
                 src="./images/cake3.svg"
                 alt=""
               />
-              <div>
+              <div class="specials__description">
                 <div class="specials__price">
                   <h4 class="price__title">
                     Clinkers cake
@@ -102,6 +104,8 @@
           </div>
         </section>
         <section class="section mostSearch">
+          <div class="circleblue"></div>
+          <div class="circlered"></div>
           <h3 class="titles mostSearch__title">Los más buscados</h3>
           <p class="descriptions mostSearch__description">
             Deléitate con los productos favoritos de nuestros invitados.
@@ -247,13 +251,11 @@
           </div>
           <form class="fill">
             <div class="fill__content">
-              <div>
-                <h4 class="price__title">
-                  Envía un mensaje con los detalles de tu pedido
-                </h4>
-              </div>
+              <h4 class="fill__maintitle">
+                Envía un mensaje con los detalles de tu pedido
+              </h4>
               <div class="put name">
-                <label for="name" class="fill__title">NOMBRE COMPLETO</label>
+                <label for="name" class="fill__title">NOMBRE COMPLETO </label>
                 <input
                   class="holder name"
                   type="text"
@@ -265,8 +267,8 @@
               </div>
               <div class="put email">
                 <label for="email" class="fill__title"
-                  >CORREO ELECTRONICO</label
-                >
+                  >CORREO ELECTRONICO
+                </label>
                 <input
                   class="holder email"
                   type="text"
@@ -277,14 +279,16 @@
                 <span class="error" id="emailError"></span>
               </div>
               <div class="put descripcion">
-                <label for="descripción" class="fill__title">DESCRIPCION</label>
-                <input
+                <label for="descripción" class="fill__title"
+                  >DESCRIPCION
+                </label>
+                <textarea
                   class="holder holder__descripcion"
-                  type="text"
                   name="descripcion"
                   id="descripcion"
                   placeholder="Ingresa una breve descripción del pedido que tienes en mente"
-                />
+                  rows="5"
+                ></textarea>
                 <span class="error" id="descripcionError"></span>
               </div>
               <button type="button" class="button enviar" id="buttonEnviar">

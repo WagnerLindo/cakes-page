@@ -34,14 +34,44 @@ body {
   font: var(--text);
   margin: 0;
 }
-.colorGradient {
-  background-image: radial-gradient(#9be7f3, #ffffff);
+.allContent {
+  overflow-x: hidden;
+  position: relative;
+}
+.mostSearch {
+  position: relative;
 }
 .header {
   color: var(--text_dark);
   margin-block-end: 40px;
   padding-inline: 16px;
   padding-block-start: 16px;
+}
+.circleblue {
+  width: 462px;
+  height: 462px;
+  border-radius: 50%;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #a9ebf7 0%,
+    rgba(223, 255, 249, 0) 100%
+  );
+  position: absolute;
+  inset-inline-start: -158px;
+  inset-block-start: 0px;
+}
+.circlered {
+  width: 616px;
+  height: 616px;
+  border-radius: 50%;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #ffe8e8 0%,
+    rgba(223, 255, 249, 0) 100%
+  );
+  position: absolute;
+  inset-inline-start: 112px;
+  inset-block-start: 0px;
 }
 .main {
   padding-inline: 16px;
@@ -58,6 +88,7 @@ body {
   font: var(--h3);
 }
 .header__content {
+  isolation: isolate;
   margin-block-start: 32px;
 }
 .header__description {
@@ -65,7 +96,8 @@ body {
 }
 .header__content,
 .search__descripcion,
-.logo__desktop {
+.logo__desktop,
+.specials__description {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -103,6 +135,10 @@ body {
   display: flex;
   flex-direction: column;
   gap: 48px;
+  isolation: isolate;
+}
+.mostSearch__description {
+  isolation: isolate;
 }
 .titles {
   text-align: center;
@@ -132,6 +168,7 @@ body {
 }
 .mostSearch__title {
   align-self: flex-start;
+  isolation: isolate;
 }
 .comments__title {
   padding-inline: 25px;
@@ -182,34 +219,31 @@ body {
   padding: 28px;
   border-radius: 6px;
 }
-.fill__content {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
 .put {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  margin-block-end: 16px;
+}
+.fill__maintitle {
+  font: var(--h4-bold);
+  margin-bottom: 24px;
 }
 .fill__title {
   font: var(--label);
 }
 .holder::placeholder {
   color: var(--grey-2);
-  font: var(--text);
+  font: var(--text_small);
+  line-height: 1.5z;
 }
 .holder {
-  text-overflow: ellipsiss;
+  margin-block-start: 16px;
   padding: 16px;
   border: none;
   border-radius: 6px;
 }
-.holder__descripcion {
-  height: 50px;
-}
 .enviar {
-  width: 60%;
+  max-width: 170px;
 }
 .social {
   display: flex;
@@ -242,15 +276,22 @@ body {
 @media (min-width: 768px) {
   .cakeshop {
     text-align: start;
+    isolation: isolate;
   }
   .header {
     display: flex;
     flex-direction: column;
     padding-inline-start: 30px;
   }
+  .circleblue {
+    right: 550px;
+  }
+  .circlered {
+    left: 400px;
+  }
   .main {
     padding-inline: 30px;
-    padding-block: 50px;
+    padding-block: 70px;
   }
   .footer,
   .stories {
@@ -287,8 +328,27 @@ body {
     padding-inline-start: 60px;
     padding-block-start: 40px;
   }
-  .header__title {
-    font: var(--h1);
+  .circleblue {
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      #dffff9 0%,
+      rgba(223, 255, 249, 0) 100%
+    );
+    width: 800px;
+    height: 800px;
+    inset-inline-start: -100px;
+    inset-block-start: -160px;
+  }
+  .circlered {
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      #ffe8e8 0%,
+      rgba(223, 255, 249, 0) 100%
+    );
+    width: 1000px;
+    height: 1000px;
+    inset-inline-start: 660px;
+    inset-block-start: -360px;
   }
   .main {
     padding-inline: 60px;
@@ -327,15 +387,30 @@ body {
   .header {
     padding-inline-start: 120px;
   }
+  .circleblue {
+    width: 1200px;
+    height: 1200px;
+    inset-inline-start: -200px;
+    inset-block-start: -260px;
+  }
+  .circlered {
+    width: 1600px;
+    height: 1600px;
+    inset-inline-start: 860px;
+    top: -560px;
+  }
   .desktop__title {
     flex-basis: 55%;
+  }
+  .header__title {
+    font: var(--h1);
   }
   .desktop__title .button {
     width: 50%;
   }
   .main {
     padding-inline: 120px;
-    padding-block: 50px;
+    padding-block: 90px;
     width: fit-content;
   }
   .cards {
@@ -389,10 +464,7 @@ body {
     justify-content: space-between;
   }
   .fill {
-    flex-basis: 50%;
-  }
-  .enviar {
-    width: 40%;
+    flex-basis: 40%;
   }
   .stories {
     padding-inline: unset;
