@@ -255,9 +255,7 @@
                 Envía un mensaje con los detalles de tu pedido
               </h4>
               <div class="put name">
-                <label for="name" class="fill__title"
-                  >NOMBRE COMPLETO <span class="error" id="nameError"></span
-                ></label>
+                <label for="name" class="fill__title">NOMBRE COMPLETO </label>
                 <input
                   class="holder name"
                   type="text"
@@ -265,12 +263,12 @@
                   id="name"
                   placeholder="Ingresa tu nombre"
                 />
-                <span></span>
+                <span class="error" id="nameError"></span>
               </div>
               <div class="put email">
                 <label for="email" class="fill__title"
-                  >CORREO ELECTRONICO <span class="error" id="emailError"></span
-                ></label>
+                  >CORREO ELECTRONICO
+                </label>
                 <input
                   class="holder email"
                   type="text"
@@ -278,12 +276,12 @@
                   id="email"
                   placeholder="Ingresa tu correo electrónico"
                 />
-                <span></span>
+                <span class="error" id="emailError"></span>
               </div>
               <div class="put descripcion">
                 <label for="descripción" class="fill__title"
-                  >DESCRIPCION <span class="error" id="descripcionError"></span
-                ></label>
+                  >DESCRIPCION
+                </label>
                 <textarea
                   class="holder holder__descripcion"
                   name="descripcion"
@@ -291,7 +289,7 @@
                   placeholder="Ingresa una breve descripción del pedido que tienes en mente"
                   rows="5"
                 ></textarea>
-                <span></span>
+                <span class="error" id="descripcionError"></span>
               </div>
               <button type="button" class="button enviar" id="buttonEnviar">
                 ENVIAR MENSAJE

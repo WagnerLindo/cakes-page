@@ -31,5 +31,5 @@ buttonEnviarEl.addEventListener("click", (click) => {
   emailError.textContent = emailValue && isEmailOk ? "" : "email required";
 
   const descripcionError = document.querySelector("#descripcionError");
-  descripcionError.textContent = descripcionValue ? "" : "descripcion required";
+  descripcionError.textContent = descripcionValue ? "" : "description required";
 });
