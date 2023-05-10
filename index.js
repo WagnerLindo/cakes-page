@@ -89,21 +89,3 @@ sliderActives3.forEach((sliderActive3) => {
 
 // const sliderButtons = document.querySelectorAll(".slider__circle");
 // const changeLogos = document.querySelectorAll(".logoImage");
-
-// sliderButtons.forEach((sliderButton) => {
-//   sliderButton.addEventListener("click", (event) => {
-//     console.log("dataset", sliderButton.dataset);
-//     const showPicture = sliderButton.dataset.name;
-//     const idSelected = event.currentTarget.id;
-//     console.log(idSelected, "id");
-
-//     const selectedCard = document.querySelector(`#${showPicture}`);
-//     changeLogos.forEach((logoImage) => {
-//       if (selectedCard === changeLogos) {
-//         selectedCard.classList.add("block");
-//       } else {
-//         logoImage.classList.remove("block");
-//       }
-//     });
-//   });
-// });
