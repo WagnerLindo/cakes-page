@@ -1,3 +1,49 @@
+//slider
+const sliderActives1 = document.querySelectorAll("#sliderActive1");
+const sliderActives2 = document.querySelectorAll("#sliderActive2");
+const sliderActives3 = document.querySelectorAll("#sliderActive3");
+const cakesChange = document.querySelector("#cakesChange");
+
+sliderActives1.forEach((sliderActive1) => {
+  sliderActive1.addEventListener("click", () => {
+    sliderActive1.classList.add("active");
+    sliderActives2.forEach((sliderActive2) => {
+      sliderActive2.classList.remove("active");
+    });
+    sliderActives3.forEach((sliderActive3) => {
+      sliderActive3.classList.remove("active");
+    });
+    cakesChange.src = "./images/image2.png";
+  });
+});
+
+sliderActives2.forEach((sliderActive2) => {
+  sliderActive2.addEventListener("click", () => {
+    sliderActive2.classList.add("active");
+    sliderActives1.forEach((sliderActive1) => {
+      sliderActive1.classList.remove("active");
+    });
+    sliderActives3.forEach((sliderActive3) => {
+      sliderActive3.classList.remove("active");
+    });
+    cakesChange.src = "./images/cakeslider2.svg";
+  });
+});
+
+sliderActives3.forEach((sliderActive3) => {
+  sliderActive3.addEventListener("click", () => {
+    sliderActive3.classList.add("active");
+    sliderActives2.forEach((sliderActive2) => {
+      sliderActive2.classList.remove("active");
+    });
+    sliderActives1.forEach((sliderActive1) => {
+      sliderActive1.classList.remove("active");
+    });
+    cakesChange.src = "./images/cakeslider3.svg";
+  });
+});
+
+//formlario
 const nameInput = document.querySelector("#name");
 const emailInput = document.querySelector("#email");
 const descripcionInput = document.querySelector("#descripcion");
