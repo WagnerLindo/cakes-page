@@ -263,6 +263,8 @@ body {
   margin-block-start: 16px;
   border: none;
   border-radius: 6px;
+  padding-inline: 16px;
+  padding-block: 8px;
 }
 .enviar {
   max-width: 170px;
