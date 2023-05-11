@@ -131,9 +131,6 @@ body {
 .slider__circle.active {
   background: var(--primary);
 }
-.slider__circle:hover {
-  background: var(--primary);
-}
 .slider__desktop,
 #cakeslider2,
 #cakeslider3 {
